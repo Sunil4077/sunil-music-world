@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,8 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    scroll-behavior:smooth;
     font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
@@ -26,10 +27,10 @@ body{
 nav{
     width:100%;
     padding:20px 40px;
+    background:rgba(0,0,0,0.7);
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(0,0,0,0.7);
     position:fixed;
     top:0;
     z-index:1000;
@@ -55,7 +56,6 @@ nav ul li a{
     color:white;
     text-decoration:none;
     font-size:18px;
-    transition:0.3s;
 }
 
 nav ul li a:hover{
@@ -95,11 +95,6 @@ nav ul li a:hover{
     font-size:20px;
     cursor:pointer;
     box-shadow:0 0 20px red;
-    transition:0.3s;
-}
-
-.hero button:hover{
-    transform:scale(1.1);
 }
 
 /* SONGS */
@@ -107,6 +102,7 @@ nav ul li a:hover{
 .songs{
     padding:100px 20px;
     text-align:center;
+    background:rgba(0,0,0,0.6);
 }
 
 .songs h2{
@@ -116,17 +112,18 @@ nav ul li a:hover{
 }
 
 .song-box{
-    background:rgba(255,255,255,0.05);
-    padding:30px;
-    border-radius:20px;
     width:400px;
     margin:auto;
+    padding:30px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.05);
     box-shadow:0 0 20px red;
 }
 
 .song-box h3{
-    color:#ffd369;
     margin-bottom:20px;
+    color:#ffd369;
+    font-size:28px;
 }
 
 /* GALLERY */
@@ -153,11 +150,6 @@ nav ul li a:hover{
     width:300px;
     border-radius:20px;
     box-shadow:0 0 20px red;
-    transition:0.3s;
-}
-
-.gallery-images img:hover{
-    transform:scale(1.05);
 }
 
 /* VIDEO */
@@ -165,12 +157,13 @@ nav ul li a:hover{
 .video{
     padding:100px 20px;
     text-align:center;
+    background:rgba(0,0,0,0.6);
 }
 
 .video h2{
     font-size:50px;
-    margin-bottom:40px;
     color:#66ffff;
+    margin-bottom:40px;
 }
 
 /* CONTACT */
@@ -182,8 +175,8 @@ nav ul li a:hover{
 
 .contact h2{
     font-size:50px;
-    margin-bottom:30px;
     color:#66ffff;
+    margin-bottom:30px;
 }
 
 .contact input,
@@ -245,26 +238,28 @@ iframe{
 <!-- NAVBAR -->
 
 <nav>
-    <div class="logo">Sunil Music World</div>
 
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#songs">Songs</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#video">Video</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+<div class="logo">Sunil Music World</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#songs">Songs</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#video">Video</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
 </nav>
 
 <!-- HERO -->
 
 <section class="hero" id="home">
 
-    <h1>🎵 Sunil Music World 🎵</h1>
+<h1>🎵 Sunil Music World 🎵</h1>
 
-    <p>Welcome to my professional music website</p>
+<p>Welcome to my professional music website</p>
 
-    <button>Click Me</button>
+<button>Click Me</button>
 
 </section>
 
@@ -272,19 +267,21 @@ iframe{
 
 <section class="songs" id="songs">
 
-    <h2>🎵 My Songs 🎵</h2>
+<h2>🎵 My Songs 🎵</h2>
 
-    <div class="song-box">
+<div class="song-box">
 
-        <h3>PREMA YESUNI</h3>
+<h3>PREMA YESUNI</h3>
 
-        <audio controls style="width:100%;">
+<audio controls style="width:100%;">
 
-            <source src="PREMA YESUNI.mp3" type="audio/mpeg">
+<source src="PREMA YESUNI.mp3" type="audio/mpeg">
 
-        </audio>
+Your browser does not support audio.
 
-    </div>
+</audio>
+
+</div>
 
 </section>
 
@@ -292,15 +289,15 @@ iframe{
 
 <section class="gallery" id="gallery">
 
-    <h2>Gallery</h2>
+<h2>Gallery</h2>
 
-    <div class="gallery-images">
+<div class="gallery-images">
 
-        <img src="bg.png">
-        <img src="bg.png">
-        <img src="bg.png">
+<img src="bg.png">
+<img src="bg.png">
+<img src="bg.png">
 
-    </div>
+</div>
 
 </section>
 
@@ -308,14 +305,14 @@ iframe{
 
 <section class="video" id="video">
 
-    <h2>Latest Video</h2>
+<h2>Latest Video</h2>
 
-    <iframe width="800" height="450"
-        src="https://www.youtube.com/embed/m5OQzJFDdm8"
-        title="YouTube video player"
-        frameborder="0"
-        allowfullscreen>
-    </iframe>
+<iframe width="800" height="450"
+src="https://www.youtube.com/embed/m5OQzJFDdm8"
+title="YouTube video player"
+frameborder="0"
+allowfullscreen>
+</iframe>
 
 </section>
 
@@ -323,15 +320,15 @@ iframe{
 
 <section class="contact" id="contact">
 
-    <h2>Contact Me</h2>
+<h2>Contact Me</h2>
 
-    <input type="text" placeholder="Your Name"><br>
+<input type="text" placeholder="Your Name"><br>
 
-    <input type="email" placeholder="Your Email"><br>
+<input type="email" placeholder="Your Email"><br>
 
-    <textarea rows="5" placeholder="Your Message"></textarea><br>
+<textarea rows="5" placeholder="Your Message"></textarea><br>
 
-    <button>Send</button>
+<button>Send</button>
 
 </section>
 
@@ -339,7 +336,7 @@ iframe{
 
 <footer>
 
-    © 2026 Sunil Music World | All Rights Reserved
+© 2026 Sunil Music World | All Rights Reserved
 
 </footer>
 
