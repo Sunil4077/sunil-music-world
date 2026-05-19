@@ -1,248 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Sunil Music World</title>
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:Arial, sans-serif;
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:url('bg.png');
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-    color:white;
+background:url('bg.png') no-repeat center center/cover;
+background-attachment:fixed;
+color:white;
 }
 
 /* NAVBAR */
 
 nav{
-    width:100%;
-    padding:20px 50px;
-    background:rgba(0,0,0,0.7);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:fixed;
-    top:0;
-    z-index:1000;
-    backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+background:rgba(0,0,0,0.6);
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .logo{
-    color:gold;
-    font-size:35px;
-    font-weight:bold;
-    text-shadow:0 0 20px orange;
+font-size:35px;
+font-weight:bold;
+color:#ffcc00;
+text-shadow:0 0 10px orange;
 }
 
 nav ul{
-    list-style:none;
-    display:flex;
+display:flex;
+list-style:none;
 }
 
 nav ul li{
-    margin-left:25px;
+margin-left:25px;
 }
 
 nav ul li a{
-    color:white;
-    text-decoration:none;
-    font-size:18px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:0.3s;
 }
 
 nav ul li a:hover{
-    color:#00ffff;
+color:#00ffff;
 }
 
 /* HERO */
 
 .hero{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    text-align:center;
-    background:rgba(0,0,0,0.5);
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:rgba(0,0,0,0.5);
 }
 
 .hero h1{
-    font-size:80px;
-    color:#ffcc00;
-    text-shadow:0 0 25px red;
+font-size:80px;
+color:#ff5e5e;
+text-shadow:0 0 20px red;
 }
 
 .hero p{
-    margin-top:20px;
-    font-size:24px;
+margin-top:20px;
+font-size:25px;
+color:#00ffff;
 }
 
 .hero button{
-    margin-top:30px;
-    padding:15px 40px;
-    border:none;
-    border-radius:30px;
-    background:red;
-    color:white;
-    font-size:20px;
-    cursor:pointer;
-    box-shadow:0 0 20px red;
+margin-top:30px;
+padding:15px 40px;
+border:none;
+border-radius:30px;
+background:#ff3c3c;
+color:white;
+font-size:20px;
+cursor:pointer;
+box-shadow:0 0 20px red;
+transition:0.3s;
+}
+
+.hero button:hover{
+transform:scale(1.1);
 }
 
 /* SONGS */
 
-.songs{
-    padding:120px 20px;
-    text-align:center;
+#songs{
+padding:80px 20px;
+text-align:center;
 }
 
-.songs h1{
-    font-size:60px;
-    color:#00ffff;
-    margin-bottom:40px;
-    text-shadow:0 0 20px cyan;
+#songs h1{
+font-size:60px;
+color:#00ffff;
+margin-bottom:40px;
+text-shadow:0 0 15px cyan;
 }
 
 .song-box{
-    width:500px;
-    margin:30px auto;
-    padding:30px;
-    border-radius:30px;
-    background:rgba(0,0,0,0.6);
-    box-shadow:0 0 25px red;
+background:rgba(0,0,0,0.7);
+padding:30px;
+border-radius:25px;
+width:80%;
+margin:auto;
+border:3px solid #ff3c3c;
+box-shadow:0 0 25px red;
 }
 
 .song-box h2{
-    color:gold;
-    margin-bottom:20px;
-    font-size:30px;
+color:yellow;
+margin-bottom:20px;
+font-size:40px;
 }
 
 audio{
-    width:100%;
-    height:55px;
+width:100%;
+}
+
+/* VIDEOS */
+
+#videos{
+padding:80px 20px;
+text-align:center;
+}
+
+#videos h1{
+font-size:60px;
+color:#00ffff;
+margin-bottom:40px;
+}
+
+.video-box{
+margin-bottom:50px;
+}
+
+iframe{
+width:80%;
+height:450px;
+border-radius:20px;
+box-shadow:0 0 25px red;
 }
 
 /* GALLERY */
 
-.gallery{
-    padding:100px 20px;
-    text-align:center;
+#gallery{
+padding:80px 20px;
+text-align:center;
 }
 
-.gallery h1{
-    font-size:60px;
-    color:#00ffff;
-    margin-bottom:40px;
+#gallery h1{
+font-size:60px;
+color:#00ffff;
+margin-bottom:40px;
 }
 
-.gallery-images{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
-.gallery-images img{
-    width:300px;
-    border-radius:20px;
-    box-shadow:0 0 20px red;
-}
-
-/* VIDEO */
-
-.video{
-    padding:100px 20px;
-    text-align:center;
-}
-
-.video h1{
-    font-size:60px;
-    color:#00ffff;
-    margin-bottom:40px;
-}
-
-iframe{
-    width:80%;
-    height:500px;
-    border-radius:20px;
-    box-shadow:0 0 25px red;
-    margin-top:30px;
+.gallery-grid img{
+width:100%;
+border-radius:20px;
+border:3px solid #ff3c3c;
+box-shadow:0 0 20px red;
 }
 
 /* CONTACT */
 
-.contact{
-    padding:100px 20px;
-    text-align:center;
+#contact{
+padding:80px 20px;
+text-align:center;
 }
 
-.contact h1{
-    font-size:60px;
-    color:#00ffff;
-    margin-bottom:30px;
+#contact h1{
+font-size:60px;
+color:#00ffff;
+margin-bottom:30px;
 }
 
-.contact input,
-.contact textarea{
-    width:400px;
-    padding:15px;
-    margin:10px;
-    border:none;
-    border-radius:15px;
+form{
+display:flex;
+flex-direction:column;
+width:60%;
+margin:auto;
 }
 
-.contact button{
-    padding:15px 40px;
-    border:none;
-    border-radius:30px;
-    background:red;
-    color:white;
-    font-size:18px;
-    cursor:pointer;
+form input,
+form textarea{
+margin:10px 0;
+padding:15px;
+border:none;
+border-radius:10px;
+font-size:18px;
+}
+
+form button{
+padding:15px;
+border:none;
+border-radius:30px;
+background:#ff3c3c;
+color:white;
+font-size:20px;
+cursor:pointer;
+box-shadow:0 0 20px red;
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
 
-    nav{
-        flex-direction:column;
-    }
+.hero h1{
+font-size:45px;
+}
 
-    nav ul{
-        margin-top:15px;
-    }
+.hero p{
+font-size:18px;
+}
 
-    .hero h1{
-        font-size:45px;
-    }
+iframe{
+height:250px;
+width:95%;
+}
 
-    .song-box{
-        width:95%;
-    }
+.song-box{
+width:95%;
+}
 
-    iframe{
-        width:95%;
-        height:250px;
-    }
+form{
+width:90%;
+}
 
-    .contact input,
-    .contact textarea{
-        width:95%;
-    }
+nav{
+flex-direction:column;
+}
+
+nav ul{
+margin-top:15px;
+}
 
 }
 
@@ -254,28 +269,24 @@ iframe{
 <!-- NAVBAR -->
 
 <nav>
-
-<div class="logo">
-Sunil Music World
-</div>
+<div class="logo">Sunil Music World</div>
 
 <ul>
-<li><a href="#home">Home</a></li>
+<li><a href="#">Home</a></li>
 <li><a href="#songs">Songs</a></li>
+<li><a href="#videos">Videos</a></li>
 <li><a href="#gallery">Gallery</a></li>
-<li><a href="#video">Videos</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
-
 </nav>
 
 <!-- HERO -->
 
-<section class="hero" id="home">
+<section class="hero">
 
 <h1>🎵 Sunil Music World 🎵</h1>
 
-<p>Welcome to my professional music website</p>
+<p>Welcome To My Official Music Website</p>
 
 <button>Listen Now</button>
 
@@ -283,7 +294,7 @@ Sunil Music World
 
 <!-- SONGS -->
 
-<section class="songs" id="songs">
+<section id="songs">
 
 <h1>🎵 My Songs 🎵</h1>
 
@@ -292,24 +303,8 @@ Sunil Music World
 <h2>PREMA YESUNI</h2>
 
 <audio controls preload="auto">
-<source src="song.mp3" type="audio/mpeg">
+<source src="./PREMA%20YESUNI.mp3" type="audio/mpeg">
 </audio>
-
-</div>
-
-</section>
-
-<!-- GALLERY -->
-
-<section class="gallery" id="gallery">
-
-<h1>Gallery</h1>
-
-<div class="gallery-images">
-
-<img src="bg.png">
-<img src="bg.png">
-<img src="bg.png">
 
 </div>
 
@@ -317,42 +312,70 @@ Sunil Music World
 
 <!-- VIDEOS -->
 
-<section class="video" id="video">
+<section id="videos">
 
-<h1>Latest Videos</h1>
+<h1>🎬 Latest Videos 🎬</h1>
+
+<div class="video-box">
 
 <iframe
 src="https://www.youtube.com/embed/m5OQzJFDdm8"
-title="YouTube video player"
+title="YouTube video"
 frameborder="0"
 allowfullscreen>
 </iframe>
 
+</div>
+
+<div class="video-box">
+
 <iframe
 src="https://www.youtube.com/embed/AcRcsqnRV8w"
-title="YouTube video player"
+title="YouTube video"
 frameborder="0"
 allowfullscreen>
 </iframe>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<h1>Gallery</h1>
+
+<div class="gallery-grid">
+
+<img src="bg.png">
+<img src="bg.png">
+<img src="bg.png">
+<img src="bg.png">
+
+</div>
 
 </section>
 
 <!-- CONTACT -->
 
-<section class="contact" id="contact">
+<section id="contact">
 
 <h1>Contact Me</h1>
 
-<input type="text" placeholder="Your Name"><br>
+<form>
 
-<input type="email" placeholder="Your Email"><br>
+<input type="text" placeholder="Your Name">
 
-<textarea rows="5" placeholder="Message"></textarea><br>
+<input type="email" placeholder="Your Email">
 
-<button>Send Message</button>
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button type="submit">Send</button>
+
+</form>
 
 </section>
 
 </body>
-
 </html>
