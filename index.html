@@ -1,321 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sunil Music World</title>
+<!-- SONG SECTION START -->
 
-<style>
+<section id="songs" style="text-align:center; padding:40px;">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-font-family:Arial, sans-serif;
-}
-
-body{
-background:url('bg.png') no-repeat center center/cover;
-background-attachment:fixed;
-color:white;
-}
-
-/* NAVBAR */
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 50px;
-background:rgba(0,0,0,0.6);
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-.logo{
-font-size:35px;
-font-weight:bold;
-color:#ffcc00;
-text-shadow:0 0 10px orange;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-}
-
-nav ul li{
-margin-left:25px;
-}
-
-nav ul li a{
-text-decoration:none;
-color:white;
-font-weight:bold;
-transition:0.3s;
-}
-
-nav ul li a:hover{
+<h1 style="
 color:#00ffff;
-}
+font-size:55px;
+text-shadow:0 0 20px #00ffff;
+margin-bottom:20px;">
+🎵 My Songs 🎵
+</h1>
 
-/* HERO */
-
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:rgba(0,0,0,0.5);
-}
-
-.hero h1{
-font-size:80px;
-color:#ff5e5e;
-text-shadow:0 0 20px red;
-}
-
-.hero p{
-margin-top:20px;
-font-size:25px;
-color:#00ffff;
-}
-
-.hero button{
-margin-top:30px;
-padding:15px 40px;
-border:none;
-border-radius:30px;
-background:#ff3c3c;
-color:white;
-font-size:20px;
-cursor:pointer;
-box-shadow:0 0 20px red;
-transition:0.3s;
-}
-
-.hero button:hover{
-transform:scale(1.1);
-}
-
-/* SONGS */
-
-#songs{
-padding:80px 20px;
-text-align:center;
-}
-
-#songs h1{
-font-size:60px;
-color:#00ffff;
-margin-bottom:40px;
-text-shadow:0 0 15px cyan;
-}
-
-.song-box{
+<div style="
 background:rgba(0,0,0,0.7);
-padding:30px;
+border:3px solid #ff004c;
 border-radius:25px;
-width:70%;
+padding:20px;
+width:350px;
 margin:auto;
-border:3px solid #ff3c3c;
-box-shadow:0 0 25px red;
-text-align:center;
-}
+box-shadow:0 0 30px #ff004c;">
 
-.song-box h2{
+<h2 style="
 color:yellow;
-margin-bottom:20px;
-font-size:40px;
-}
+font-size:32px;
+margin-bottom:15px;">
+PREMA YESUNI
+</h2>
 
-audio{
-width:35%;
+<audio controls preload="auto"
+style="
+width:250px;
 height:35px;
-border-radius:20px;
-}
-
-/* VIDEOS */
-
-#videos{
-padding:80px 20px;
-text-align:center;
-}
-
-#videos h1{
-font-size:60px;
-color:#00ffff;
-margin-bottom:40px;
-text-shadow:0 0 15px cyan;
-}
-
-.video-box{
-margin-bottom:50px;
-}
-
-iframe{
-width:80%;
-height:450px;
-border-radius:20px;
-box-shadow:0 0 25px red;
-}
-
-/* GALLERY */
-
-#gallery{
-padding:80px 20px;
-text-align:center;
-}
-
-#gallery h1{
-font-size:60px;
-color:#00ffff;
-margin-bottom:40px;
-text-shadow:0 0 15px cyan;
-}
-
-.gallery-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.gallery-grid img{
-width:100%;
-border-radius:20px;
-border:3px solid #ff3c3c;
-box-shadow:0 0 20px red;
-}
-
-/* CONTACT */
-
-#contact{
-padding:80px 20px;
-text-align:center;
-}
-
-#contact h1{
-font-size:60px;
-color:#00ffff;
-margin-bottom:30px;
-}
-
-form{
-display:flex;
-flex-direction:column;
-width:60%;
-margin:auto;
-}
-
-form input,
-form textarea{
-margin:10px 0;
-padding:15px;
-border:none;
-border-radius:10px;
-font-size:18px;
-}
-
-form button{
-padding:15px;
-border:none;
-border-radius:30px;
-background:#ff3c3c;
-color:white;
-font-size:20px;
-cursor:pointer;
-box-shadow:0 0 20px red;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:45px;
-}
-
-.hero p{
-font-size:18px;
-}
-
-iframe{
-height:250px;
-width:95%;
-}
-
-.song-box{
-width:95%;
-}
-
-audio{
-width:90%;
-}
-
-form{
-width:90%;
-}
-
-nav{
-flex-direction:column;
-}
-
-nav ul{
-margin-top:15px;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- NAVBAR -->
-
-<nav>
-
-<div class="logo">
-Sunil Music World
-</div>
-
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#songs">Songs</a></li>
-<li><a href="#videos">Videos</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-</nav>
-
-<!-- HERO -->
-
-<section class="hero">
-
-<h1>🎵 Sunil Music World 🎵</h1>
-
-<p>Welcome To My Official Music Website</p>
-
-<button>Listen Now</button>
-
-</section>
-
-<!-- SONGS -->
-
-<section id="songs">
-
-<h1>🎵 My Songs 🎵</h1>
-
-<div class="song-box">
-
-<h2>PREMA YESUNI</h2>
-
-<audio controls preload="auto">
+border-radius:20px;">
 
 <source src="./PREMA%20YESUNI.mp3" type="audio/mpeg">
 
@@ -327,72 +42,43 @@ Your browser does not support audio.
 
 </section>
 
-<!-- VIDEOS -->
+<!-- SONG SECTION END -->
 
-<section id="videos">
+<!-- YOUTUBE VIDEOS -->
 
-<h1>🎬 Latest Videos 🎬</h1>
+<section style="text-align:center; padding:40px;">
 
-<div class="video-box">
+<h1 style="
+color:#00ffff;
+font-size:45px;
+text-shadow:0 0 20px cyan;">
+🎬 Latest Videos 🎬
+</h1>
 
-<iframe
+<br>
+
+<iframe width="500" height="280"
 src="https://www.youtube.com/embed/m5OQzJFDdm8"
-title="YouTube video"
+title="YouTube video player"
 frameborder="0"
-allowfullscreen>
+allowfullscreen
+style="
+border-radius:20px;
+border:3px solid #ff004c;
+box-shadow:0 0 30px #ff004c;">
 </iframe>
 
-</div>
+<br><br>
 
-<div class="video-box">
-
-<iframe
+<iframe width="500" height="280"
 src="https://www.youtube.com/embed/AcRcsqnRV8w"
-title="YouTube video"
+title="YouTube video player"
 frameborder="0"
-allowfullscreen>
+allowfullscreen
+style="
+border-radius:20px;
+border:3px solid #00ffff;
+box-shadow:0 0 30px #00ffff;">
 </iframe>
 
-</div>
-
 </section>
-
-<!-- GALLERY -->
-
-<section id="gallery">
-
-<h1>Gallery</h1>
-
-<div class="gallery-grid">
-
-<img src="bg.png">
-<img src="bg.png">
-<img src="bg.png">
-<img src="bg.png">
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<h1>Contact Me</h1>
-
-<form>
-
-<input type="text" placeholder="Your Name">
-
-<input type="email" placeholder="Your Email">
-
-<textarea rows="5" placeholder="Your Message"></textarea>
-
-<button type="submit">Send</button>
-
-</form>
-
-</section>
-
-</body>
-</html>
