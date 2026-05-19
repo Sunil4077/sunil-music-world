@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +20,7 @@ body{
     font-family:Arial, sans-serif;
     background:url('bg.png');
     background-size:cover;
+    background-position:center;
     background-attachment:fixed;
     color:white;
 }
@@ -28,10 +30,10 @@ body{
 nav{
     width:100%;
     padding:20px 50px;
+    background:rgba(0,0,0,0.7);
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(0,0,0,0.6);
     position:fixed;
     top:0;
     z-index:1000;
@@ -39,15 +41,15 @@ nav{
 }
 
 .logo{
+    color:gold;
     font-size:35px;
     font-weight:bold;
-    color:gold;
-    text-shadow:0 0 15px orange;
+    text-shadow:0 0 20px orange;
 }
 
 nav ul{
-    display:flex;
     list-style:none;
+    display:flex;
 }
 
 nav ul li{
@@ -55,10 +57,9 @@ nav ul li{
 }
 
 nav ul li a{
-    text-decoration:none;
     color:white;
+    text-decoration:none;
     font-size:18px;
-    transition:0.3s;
 }
 
 nav ul li a:hover{
@@ -92,7 +93,7 @@ nav ul li a:hover{
     margin-top:30px;
     padding:15px 40px;
     border:none;
-    border-radius:40px;
+    border-radius:30px;
     background:red;
     color:white;
     font-size:20px;
@@ -100,18 +101,14 @@ nav ul li a:hover{
     box-shadow:0 0 20px red;
 }
 
-.hero button:hover{
-    background:#ff3333;
-}
+/* SONGS */
 
-/* SONG SECTION */
-
-.song-section{
+.songs{
     padding:120px 20px;
     text-align:center;
 }
 
-.song-section h1{
+.songs h1{
     font-size:60px;
     color:#00ffff;
     margin-bottom:40px;
@@ -152,32 +149,27 @@ audio{
 .gallery-images{
     display:flex;
     justify-content:center;
-    flex-wrap:wrap;
     gap:20px;
+    flex-wrap:wrap;
 }
 
 .gallery-images img{
     width:300px;
     border-radius:20px;
     box-shadow:0 0 20px red;
-    transition:0.3s;
-}
-
-.gallery-images img:hover{
-    transform:scale(1.05);
 }
 
 /* VIDEO */
 
-.video-section{
+.video{
     padding:100px 20px;
     text-align:center;
 }
 
-.video-section h1{
+.video h1{
     font-size:60px;
     color:#00ffff;
-    margin-bottom:30px;
+    margin-bottom:40px;
 }
 
 iframe{
@@ -223,6 +215,14 @@ iframe{
 
 @media(max-width:768px){
 
+    nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        margin-top:15px;
+    }
+
     .hero h1{
         font-size:45px;
     }
@@ -239,14 +239,6 @@ iframe{
     .contact input,
     .contact textarea{
         width:95%;
-    }
-
-    nav{
-        flex-direction:column;
-    }
-
-    nav ul{
-        margin-top:15px;
     }
 
 }
@@ -268,7 +260,7 @@ Sunil Music World
 <li><a href="#home">Home</a></li>
 <li><a href="#songs">Songs</a></li>
 <li><a href="#gallery">Gallery</a></li>
-<li><a href="#videos">Videos</a></li>
+<li><a href="#video">Video</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 
@@ -286,9 +278,9 @@ Sunil Music World
 
 </section>
 
-<!-- SONGS -->
+<!-- SONG SECTION -->
 
-<section class="song-section" id="songs">
+<section class="songs" id="songs">
 
 <h1>🎵 My Songs 🎵</h1>
 
@@ -297,7 +289,8 @@ Sunil Music World
 <h2>prema.mp3</h2>
 
 <audio controls>
-<source src="prema.mp3" type="audio/mpeg">
+    <source src="./prema.mp3" type="audio/mpeg">
+    Your browser does not support audio.
 </audio>
 
 </div>
@@ -322,7 +315,7 @@ Sunil Music World
 
 <!-- VIDEO -->
 
-<section class="video-section" id="videos">
+<section class="video" id="video">
 
 <h1>Latest Video</h1>
 
