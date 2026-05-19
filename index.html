@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Sunil Music World</title>
 
 <style>
@@ -40,7 +41,7 @@ nav{
     color:#ffcc00;
     font-size:32px;
     font-weight:bold;
-    text-shadow:0 0 10px red;
+    text-shadow:0 0 15px red;
 }
 
 nav ul{
@@ -56,6 +57,7 @@ nav ul li a{
     color:white;
     text-decoration:none;
     font-size:18px;
+    transition:0.3s;
 }
 
 nav ul li a:hover{
@@ -107,12 +109,12 @@ nav ul li a:hover{
 
 .songs h2{
     font-size:50px;
-    margin-bottom:40px;
     color:#66ffff;
+    margin-bottom:40px;
 }
 
 .song-box{
-    width:400px;
+    width:450px;
     margin:auto;
     padding:30px;
     border-radius:20px;
@@ -121,8 +123,8 @@ nav ul li a:hover{
 }
 
 .song-box h3{
-    margin-bottom:20px;
     color:#ffd369;
+    margin-bottom:20px;
     font-size:28px;
 }
 
@@ -150,6 +152,11 @@ nav ul li a:hover{
     width:300px;
     border-radius:20px;
     box-shadow:0 0 20px red;
+    transition:0.3s;
+}
+
+.gallery-images img:hover{
+    transform:scale(1.05);
 }
 
 /* VIDEO */
@@ -231,6 +238,7 @@ iframe{
 }
 
 </style>
+
 </head>
 
 <body>
@@ -275,9 +283,7 @@ iframe{
 
 <audio controls style="width:100%;">
 
-<source src="PREMA YESUNI.mp3" type="audio/mpeg">
-
-Your browser does not support audio.
+<source src="prema.mp3" type="audio/mpeg">
 
 </audio>
 
@@ -341,4 +347,5 @@ allowfullscreen>
 </footer>
 
 </body>
+
 </html>
