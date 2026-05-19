@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +12,13 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
     scroll-behavior:smooth;
 }
 
 body{
-    background:url('bg.png') no-repeat center center/cover;
+    font-family:Arial, sans-serif;
+    background:url('bg.png');
+    background-size:cover;
     background-attachment:fixed;
     color:white;
 }
@@ -27,21 +27,22 @@ body{
 
 nav{
     width:100%;
-    padding:20px 40px;
-    background:rgba(0,0,0,0.7);
+    padding:20px 50px;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    background:rgba(0,0,0,0.6);
     position:fixed;
     top:0;
     z-index:1000;
+    backdrop-filter:blur(10px);
 }
 
 .logo{
-    color:#ffcc00;
-    font-size:32px;
+    font-size:35px;
     font-weight:bold;
-    text-shadow:0 0 15px red;
+    color:gold;
+    text-shadow:0 0 15px orange;
 }
 
 nav ul{
@@ -54,14 +55,14 @@ nav ul li{
 }
 
 nav ul li a{
-    color:white;
     text-decoration:none;
+    color:white;
     font-size:18px;
     transition:0.3s;
 }
 
 nav ul li a:hover{
-    color:#ff4d4d;
+    color:#00ffff;
 }
 
 /* HERO */
@@ -69,17 +70,17 @@ nav ul li a:hover{
 .hero{
     height:100vh;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
+    flex-direction:column;
     text-align:center;
     background:rgba(0,0,0,0.5);
 }
 
 .hero h1{
-    font-size:70px;
+    font-size:80px;
     color:#ffcc00;
-    text-shadow:0 0 20px red;
+    text-shadow:0 0 25px red;
 }
 
 .hero p{
@@ -91,41 +92,48 @@ nav ul li a:hover{
     margin-top:30px;
     padding:15px 40px;
     border:none;
-    border-radius:30px;
-    background:#ff3333;
+    border-radius:40px;
+    background:red;
     color:white;
     font-size:20px;
     cursor:pointer;
     box-shadow:0 0 20px red;
 }
 
-/* SONGS */
-
-.songs{
-    padding:100px 20px;
-    text-align:center;
-    background:rgba(0,0,0,0.6);
+.hero button:hover{
+    background:#ff3333;
 }
 
-.songs h2{
-    font-size:50px;
-    color:#66ffff;
+/* SONG SECTION */
+
+.song-section{
+    padding:120px 20px;
+    text-align:center;
+}
+
+.song-section h1{
+    font-size:60px;
+    color:#00ffff;
     margin-bottom:40px;
+    text-shadow:0 0 20px cyan;
 }
 
 .song-box{
-    width:450px;
+    width:500px;
     margin:auto;
     padding:30px;
-    border-radius:20px;
-    background:rgba(255,255,255,0.05);
-    box-shadow:0 0 20px red;
+    border-radius:30px;
+    background:rgba(0,0,0,0.6);
+    box-shadow:0 0 25px red;
 }
 
-.song-box h3{
-    color:#ffd369;
+.song-box h2{
+    color:gold;
     margin-bottom:20px;
-    font-size:28px;
+}
+
+audio{
+    width:100%;
 }
 
 /* GALLERY */
@@ -135,9 +143,9 @@ nav ul li a:hover{
     text-align:center;
 }
 
-.gallery h2{
-    font-size:50px;
-    color:#66ffff;
+.gallery h1{
+    font-size:60px;
+    color:#00ffff;
     margin-bottom:40px;
 }
 
@@ -161,16 +169,22 @@ nav ul li a:hover{
 
 /* VIDEO */
 
-.video{
+.video-section{
     padding:100px 20px;
     text-align:center;
-    background:rgba(0,0,0,0.6);
 }
 
-.video h2{
-    font-size:50px;
-    color:#66ffff;
-    margin-bottom:40px;
+.video-section h1{
+    font-size:60px;
+    color:#00ffff;
+    margin-bottom:30px;
+}
+
+iframe{
+    width:80%;
+    height:500px;
+    border-radius:20px;
+    box-shadow:0 0 25px red;
 }
 
 /* CONTACT */
@@ -180,65 +194,64 @@ nav ul li a:hover{
     text-align:center;
 }
 
-.contact h2{
-    font-size:50px;
-    color:#66ffff;
+.contact h1{
+    font-size:60px;
+    color:#00ffff;
     margin-bottom:30px;
 }
 
 .contact input,
 .contact textarea{
-    width:350px;
+    width:400px;
     padding:15px;
     margin:10px;
     border:none;
-    border-radius:10px;
+    border-radius:15px;
 }
 
 .contact button{
     padding:15px 40px;
     border:none;
     border-radius:30px;
-    background:#ff3333;
+    background:red;
     color:white;
     font-size:18px;
     cursor:pointer;
-    box-shadow:0 0 20px red;
-}
-
-/* FOOTER */
-
-footer{
-    text-align:center;
-    padding:30px;
-    background:rgba(0,0,0,0.7);
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
 
-.hero h1{
-    font-size:40px;
-}
+    .hero h1{
+        font-size:45px;
+    }
 
-.song-box{
-    width:90%;
-}
+    .song-box{
+        width:95%;
+    }
 
-.gallery-images img{
-    width:90%;
-}
+    iframe{
+        width:95%;
+        height:250px;
+    }
 
-iframe{
-    width:100%;
-    height:250px;
-}
+    .contact input,
+    .contact textarea{
+        width:95%;
+    }
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        margin-top:15px;
+    }
 
 }
 
 </style>
-
 </head>
 
 <body>
@@ -247,13 +260,15 @@ iframe{
 
 <nav>
 
-<div class="logo">Sunil Music World</div>
+<div class="logo">
+Sunil Music World
+</div>
 
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#songs">Songs</a></li>
 <li><a href="#gallery">Gallery</a></li>
-<li><a href="#video">Video</a></li>
+<li><a href="#videos">Videos</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 
@@ -273,18 +288,16 @@ iframe{
 
 <!-- SONGS -->
 
-<section class="songs" id="songs">
+<section class="song-section" id="songs">
 
-<h2>🎵 My Songs 🎵</h2>
+<h1>🎵 My Songs 🎵</h1>
 
 <div class="song-box">
 
-<h3>prema.mp3</h3>
+<h2>prema.mp3</h2>
 
-<audio controls style="width:100%;">
-
+<audio controls>
 <source src="prema.mp3" type="audio/mpeg">
-
 </audio>
 
 </div>
@@ -295,7 +308,7 @@ iframe{
 
 <section class="gallery" id="gallery">
 
-<h2>Gallery</h2>
+<h1>Gallery</h1>
 
 <div class="gallery-images">
 
@@ -309,11 +322,11 @@ iframe{
 
 <!-- VIDEO -->
 
-<section class="video" id="video">
+<section class="video-section" id="videos">
 
-<h2>Latest Video</h2>
+<h1>Latest Video</h1>
 
-<iframe width="800" height="450"
+<iframe
 src="https://www.youtube.com/embed/m5OQzJFDdm8"
 title="YouTube video player"
 frameborder="0"
@@ -326,26 +339,17 @@ allowfullscreen>
 
 <section class="contact" id="contact">
 
-<h2>Contact Me</h2>
+<h1>Contact Me</h1>
 
 <input type="text" placeholder="Your Name"><br>
 
 <input type="email" placeholder="Your Email"><br>
 
-<textarea rows="5" placeholder="Your Message"></textarea><br>
+<textarea rows="5" placeholder="Message"></textarea><br>
 
-<button>Send</button>
+<button>Send Message</button>
 
 </section>
 
-<!-- FOOTER -->
-
-<footer>
-
-© 2026 Sunil Music World | All Rights Reserved
-
-</footer>
-
 </body>
-
 </html>
